@@ -1,5 +1,5 @@
  # Star Wars Manager
-    This project is a Star Wars manager where you can see a wide variety of starships and select the people to be aboard.
+This project is a Star Wars manager where you can see a wide variety of starships and select the people to be aboard.
 
  ## Learning Difficulties
 * Pure DOM manipulation.
