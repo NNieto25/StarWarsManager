@@ -1,0 +1,20 @@
+//Formato aplicado al header
+#page-header {
+    display: flex;
+    width: 100%;
+    background-color: $primary;
+    height: 13vh;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    //Todos los elementos pertenecientes al #page-header tendrán posición relativa
+    * {
+        position: relative;
+    }
+
+    //Formulario de la barra de búsqueda
+    form {
+        padding-right: 20px;
+    }
+}

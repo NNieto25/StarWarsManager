@@ -1,0 +1,45 @@
+//Estilo para la barra de búsqueda
+.search-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    //Estilo a ser aplicado a todos los elementos dentro de la barra de búsqueda
+    *{
+        margin: 0px;
+        padding: 6px;
+        border: none;
+        height: 5vh;
+        display: inline;
+    }
+
+    //Estilo del botón de búsqueda
+    button {
+        background-color: white;
+    }
+
+    //Efecto de hover del botón buscar 
+    button:hover {
+        background-color: black;
+        i {
+            color: white;
+        }
+    }
+
+    //Estilo del ícono que se encuentra en el botón de buscar
+    button > i {
+        color: black;
+        text-align: center;
+    }
+
+    //Estilo del input de la nave a buscar
+    input {
+        text-align: center;
+        width: 70%;
+        font-family: $roboto;
+    }
+    //Para quitar los bordes de focus
+    input:focus{
+        outline: none;
+    }
+}

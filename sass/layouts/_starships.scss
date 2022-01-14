@@ -1,0 +1,36 @@
+//Sección de las naves
+#starships {
+    margin: 3.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    //Se le da formato al contenedor para que abarque todo el ancho
+    .star {
+        width: 100%;
+
+        //Estilo de la barra horizontal debajo del texto
+        hr {
+            align-self: center;
+            position: relative;
+            padding-top: 0rem;
+            width: 100%;
+            border: 0px;
+            margin-top: 1.5rem;
+            background-color: black;
+            height: 0.5vh;
+            }
+    }
+
+    //Se aplican las propiedades para mostrar las naves
+    .starships-container {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+}

@@ -1,0 +1,111 @@
+//Estilos de la carta principal
+.card {
+  display: block;
+  width: 21%;
+}
+.card-starship {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 25px;
+  font-size: 1.8rem;
+  padding-top: 11vh;
+  padding-bottom: 11vh;
+  margin-bottom: 5vh;
+  transition: 0.4s ease-out;
+
+  //Estilos del texto que muestra el nombre de la nave
+  h3 {
+    color: $primary;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-family: $roboto;
+  }
+  //Estilos para barra horizontal
+  hr {
+    align-self: center;
+    padding-top: 0rem;
+    width: 60%;
+    border: 0px;
+    margin-top: 1.5rem;
+    background-color: $primary;
+    height: 0.5vh;
+  }
+
+}
+
+//Estilos para la tarjeta con detalles de la nave
+.card-starship-details{
+  transition: 0.5s ease-out;
+  position: absolute;
+  top: -1;
+  left: -1;
+  height: 30vh;
+  display: none;
+  background-color: $tertiary;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  padding-top: 12vh;
+  padding-left: 1.5vw;
+  padding-bottom: 12vh;
+  color: white;
+  text-align: left;
+  z-index: 100;
+
+  //Estilo para los elementos de las definition lists
+  dd, dt {
+    font-family: $roboto;
+    font-size: 1.2rem;
+    pointer-events: none;
+    z-index: 0;
+  }
+  //Estilos para cada titulo de propiedad 
+  dt{
+    margin-top: 10%;
+    pointer-events: none;
+    font-weight: 700;
+  }
+
+  //Estilos del boton agregar
+  button{
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    align-content: center;
+    margin-left: 14vw;
+    margin-top: 2rem;
+    width: 3vw;
+    border-radius: 100%;
+    border: 3px solid black;
+    background-color: inherit;
+    font-size: 1.5rem;
+    transition: all 0.1s ease-in;
+  }
+
+  //Hover para el botón de ver más
+  button:hover{
+    transform: scale(1.2);
+  }
+  //Para quitar los bordes de focus
+  button:focus{
+    outline: none;
+  }
+}
+
+//Estilos del efecto hover
+.card-starship:hover{
+  transform: translateY(-4px) scale(1.005) translateZ(0);
+  cursor: pointer;
+  
+  //Estilo de los detalles de la carta (aparecen con el hover)
+  .card-starship-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+}

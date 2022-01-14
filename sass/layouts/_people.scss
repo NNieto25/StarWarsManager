@@ -1,0 +1,137 @@
+//Estilos para el contenedor de personas
+.people-container { 
+    background-color: $primary;
+    width: 100%;
+    margin-bottom: 10vh;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 100;
+
+    //Estilos de header
+    .crew{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 5vh;
+        margin-bottom: 2vh;
+
+        //Estilos aplicados a la barra horizontal deorativa
+        hr{
+            border: 0;
+            background-color : black;
+            height: 2.5px;
+            width: 90%;
+        }
+    }
+    //Botones atrás, adelante
+    .left, .right{
+        border: 0;
+        background-color: inherit;
+        margin: auto;
+        padding: 0;
+        font-size: 12vh;
+        height: 0%;
+        transition: 0.1s ease-out;
+    }
+    //Margen del botón izquierdo respecto al contenedor
+    .left{
+        margin-left: 6%;
+    }
+
+    //Margen del botón derecho respecto al contenedor
+    .right{
+        margin-right: 6%;
+    }
+
+    //Efecto hover para los botones de página previa y siguiente
+    .left:hover {
+        transform: translateX(-5px);
+    }
+    .right:hover {
+        transform: translateX(5px);
+    }
+
+    //Eliminación de focus al darle clic al botón
+    .left:focus{
+        outline: none;
+    }
+    .right:focus{
+        outline: none;
+    }
+    //Estilos para el contenedor de tarjetas
+    .people-cards-container{
+        display: flex;
+        margin: auto;
+        padding-bottom: 1.5rem;
+        flex-wrap: wrap;
+        border: 0;
+        width: 77%;
+        justify-content: space-between;
+    }
+}
+
+//Cuando la tarjeta está inactiva se le da una opacidad de 0.9
+.inactive {
+    opacity: 0.75;
+}
+
+//Estilo de la tarjeta cuando se expande
+.is-expanded {
+    overflow: visible;
+    margin-top: 30px;
+
+    //Estilos para el triángulo que indica a quá tarjeta pertenece el contenedor
+    .triangle{
+        position: absolute;
+        border: 0;
+        top: -30px;
+        left: calc(7.5% - 15px);
+        height: 8vh;
+        width: 6vw;
+        margin-top: 0.2rem;
+        background-color: inherit;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+}
+
+//Cuando la tarjeta está colapsada no se muestra
+.is-collapsed {
+    display: none;
+}
+
+//Media queries para posicionar el contenedor de las personas en la nave
+@media screen and (min-width: 992px) {
+    .card:nth-of-type(4n+2) .people-container {
+        margin-left: calc(-101% - 60px);
+    }
+    .card:nth-of-type(4n+3) .people-container {
+        margin-left: calc(-226.5% - 60px);
+    }
+    .card:nth-of-type(4n+4) .people-container {
+        margin-left: calc(-352% - 60px);
+    }
+    .card:nth-of-type(4n+5) {
+        clear: left;
+    }
+    .people-container {
+        width: calc(451% + 60px);
+    }
+}
+
+//Media queries para posicionar la flecha que indica la tarjeta seleccionada
+@media screen and (min-width: 992px) {
+    .card:nth-of-type(4n+2) .triangle {
+        left: 33.5%;
+    }
+    .card:nth-of-type(4n+3) .triangle {
+        left: 60%;
+    }
+    .card:nth-of-type(4n+4) .triangle {
+        left: 86.5%;
+    }
+}

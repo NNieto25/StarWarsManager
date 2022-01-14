@@ -1,0 +1,39 @@
+//Estilos para cada tipo de heading
+h1 {
+    //Mixin
+    @include base-headings(2rem, 700);
+    display: inline-block;
+    padding-left: 20px;
+}
+
+h2 {
+    //Mixin
+    @include base-headings(1.7rem, 700);
+    text-align: center;
+}
+
+h3 {
+    color: $primary;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-family: $roboto;
+}
+
+h4{
+    margin-left: 6%;
+    font-size: 1.5rem;
+}
+
+h5 {
+    //Mixin
+    @include base-headings(1.2rem, 400);
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+h4 {
+    //Mixin
+    @include base-headings(1.5rem, 700);
+    text-align: center;
+}

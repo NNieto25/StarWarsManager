@@ -1,0 +1,27 @@
+//Estilos aplicados al footer de la página web
+footer {
+    display: flex;
+    width: 100%;
+    background-color: black;
+    height: 9vh;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0px;
+
+    //Estilo del div del footer
+    div {
+        color: white;
+        font-family: $roboto;
+        font-size: 0.9rem;
+    }
+
+    //Se le agrega padding a los elementos de la derecha e izquierda
+    #left-footer {
+        padding-left: 20px;
+    }
+
+    #right-footer {
+        padding-right: 20px;
+    }
+}

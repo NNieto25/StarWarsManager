@@ -1,0 +1,151 @@
+//Contenedor de los componentes de la card
+.card-people {
+    background-color:white;
+    width: 18%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30vh;
+    border-radius: 25px;
+    transition: 0.4s ease-out;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    //Elementos del texto principal de la carta
+    .card-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        hr {
+            align-self: center;
+            padding-top: 0rem;
+            width: 60%;
+            border: 0px;
+            margin-top: 1rem;
+            background-color: black;
+            height: 0.5vh;
+        }
+    }
+}
+
+//Efecto de hover que muestra los detalles del personaje seleccionado
+.card-people:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    cursor: pointer;
+
+    //Estilo aplicado con el hover (se muestra)
+    .card-people-details {
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+//Estilo inicial de los detalles (oculto)
+.card-people-details {
+    background-color: $secondary;
+    position: absolute;
+    border-radius: 25px;
+    display: none;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease-out;
+
+    //Estilo de la lista y sus elementos
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        li {
+            font-family: $roboto;
+            text-align: center;
+            color: white;
+            font-size: 0.9rem;
+            margin: 5px;
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+
+    //Estilos aplicados al botón de añadir
+    .button-people-add {
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+        width: 2.4vw;
+        height: auto;
+        font-size: 1rem;
+        text-align: center;
+        background-color: transparent;
+        border: none;
+        position: relative;
+        left: 25%;
+        top: 14%;
+
+        //Estilo aplicado al icon
+        i {
+            color: white;
+            text-align: center;
+            padding: 0;
+            font-size: 2rem;
+        }
+}
+    //Hover para el botón de añadir personas
+    .button-people-add:hover {
+        transform: scale(1.1);
+    }
+    //Estlios para quitar los bordes de focus
+    .button-people-add:focus {
+        outline: none;
+    }
+}
+
+//Estilo que se aplica a las cartas de las personas agregadas
+.card-people.added {
+    background-color: #ccff90;
+
+    //Botón de eliminar a la persona de la nave
+    button.button-people-remove {
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+        width: 2.4vw;
+        height: auto;
+        font-size: 1rem;
+        text-align: center;
+        background-color: transparent;
+        border: none;
+        position: relative;
+        left: 25%;
+        top: 14%;
+    
+        //Estilo del icon
+        i {
+            color: white;
+            text-align: center;
+            padding: 0;
+            font-size: 2rem;
+        }
+    }
+    
+    //Hover para el botón de eliminar personas
+    button.button-people-remove:hover {
+        transform: scale(1.1);
+    }
+    //Estilo para quitar los bordes de focus
+    button.button-people-remove:focus {
+        outline: none;
+    }
+}
+
+.card-people.included{
+    background-color: #cecece;
+}

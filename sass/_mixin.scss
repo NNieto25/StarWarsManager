@@ -1,0 +1,7 @@
+//Mixin para aplicar estilo común a los headings
+@mixin base-headings($size, $weight) {
+    font-size: $size;
+    font-family: $poppins;
+    color: black;
+    font-weight: $weight;
+}

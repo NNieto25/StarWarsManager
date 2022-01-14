@@ -1,0 +1,18 @@
+//Base style imports
+@import "base/page";
+@import "base/reset";
+
+//Mixin imports
+@import "mixin";
+
+//Layout imports
+@import "layouts/header";
+@import "layouts/people";
+@import "layouts/footer";
+@import "layouts/starships";
+
+//Components imports
+@import "components/heading";
+@import "components/search-bar";
+@import "components/card-people";
+@import "components/card-starships";
